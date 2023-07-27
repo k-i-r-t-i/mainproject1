@@ -1,0 +1,173 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Mainproject1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+
+        .header
+        {
+            background-color:#F5CABF;
+            height: stretch;
+
+        }
+
+        .content{
+            background-color:#F4E1E6;
+            height: 697px;
+        }
+
+        .footer{
+            background-color:#F5CABF;
+            justify-content:end;
+            
+
+        }
+        .auto-style2 {
+            height: 32%;
+        }
+        .auto-style3 {
+            height: 697px;
+        }
+        .auto-style5 {
+             position: absolute;
+            left: 419px;
+            top: 24px;
+            width: 525px;
+             background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-512.png');
+             background-repeat: no-repeat;
+             background-position: left center;
+             background-size: 5%;
+             font-size: 16px;
+             padding: 12px 20px 12px 30px;
+             border: 1px solid #ddd;
+             margin-bottom: 12px;
+            
+        }
+
+        
+        
+       
+        
+       
+        
+       
+        
+          .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #F5CABF;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #000;
+                display: block;
+                transition: 0.3s;
+            }
+
+                .sidenav a:hover {
+                    color: #f1f1f1;
+                }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+                .sidenav a {
+                    font-size: 18px;
+                }
+        }
+
+        .menu{
+            position:absolute;
+        }
+        .auto-style11 {
+           position: absolute;
+            cursor: pointer;
+            left: 64px;
+            top: 23px;
+        }
+       
+
+       
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            
+                <table class="auto-style1">
+                    <tr class="header">
+                        <td class="auto-style2">
+                            
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+                             <div id="mySidenav" class="sidenav">
+                               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                <a href="Home.aspx">Home</a>
+                                 <a href="UserLogin.aspx">Login</a>
+                                 <a href="UserReg.aspx">SignIn</a>
+                                 <a href="Feedback.aspx">Feedback</a>
+                                 <a href="FAQ.aspx">FAQ</a>
+                                
+                               </div>
+                               <span style="font-size:30px;" class="auto-style11" onclick="openNav()" >&#9776;</span>
+                            <h2 style="align-content:center; font-family:Lucida Sans; font-weight:normal" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Trend Partner&nbsp;&nbsp;&nbsp;
+                                
+                            </h2>
+                            <input placeholder="Search..." type="text" id="myInput" class="auto-style5" >
+                              
+                        </td>
+                    </tr>
+                    <tr class="content">
+                        <td class="auto-style3"><asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder></td>
+                    </tr>
+                    <tr class="footer">
+                       <td>
+                           <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/AdminLogin.aspx">Login Admin</asp:HyperLink>                     
+                       </td>
+                    </tr>
+                    
+                  
+                </table>
+            
+        </div>
+    </form>
+</body>
+</html>

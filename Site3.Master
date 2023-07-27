@@ -1,0 +1,219 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site3.master.cs" Inherits="Mainproject1.Site3" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+
+        .header
+        {
+            background-color:#8E7CC3;
+            height: stretch;
+            width: 100%;
+
+        }
+
+        .content{
+            background-color:#ededf7;
+            height: 697px;
+        }
+
+        .footer{
+            background-color:#8E7CC3;
+            justify-content:end;
+            border:hidden;
+        }
+
+        .footer1{
+             background-color:#8E7CC3;
+            height: 60px;
+            width: 100%;
+        }
+        .auto-style2 {
+            height: 32%;
+        }
+        .auto-style3 {
+            height: 697px;
+        }
+      
+          .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #8E7CC3;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #000;
+                display: block;
+                transition: 0.3s;
+            }
+
+                .sidenav a:hover {
+                    color: #f1f1f1;
+                }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+                .sidenav a {
+                    font-size: 18px;
+                }
+        }
+
+        .menu{
+            position:absolute;
+        }
+        .auto-style11 {
+           position: absolute;
+            cursor: pointer;
+            left: 46px;
+            top: 23px;
+        }
+       
+
+       
+        .auto-style12 {
+            position: absolute;
+            left: 1140px;
+            top: 31px;
+            width: 223px;
+        }
+       
+
+       
+        .auto-style13 {
+            height: 39px;
+            width: 25%;
+        }
+        .auto-style15 {
+            height: 39px;
+            width: 351px;
+        }
+        .auto-style16 {
+            height: 39px;
+            width: 786px;
+        }
+        .auto-style17 {
+            margin-left: 0px;
+        }
+       
+
+       
+        .auto-style18 {
+            width: 1002px;
+        }
+       
+
+       
+        .auto-style19 {
+            height: 39px;
+            width: 1002px;
+        }
+       
+
+       
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            
+                <table class="auto-style1">
+                    <tr class="header">
+                        <td class="auto-style2" colspan="4">
+                            
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+                             <div id="mySidenav" class="sidenav">
+                               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                <a href="AddCategory.aspx">Categories</a>
+                                <a href="AddProduct.aspx">Add Product</a>
+                                <a href="#">Update Product</a>
+                                <a href="AdminLogin.aspx">Logout</a>
+                               </div>
+                               <span style="font-size:30px;" class="auto-style11" onclick="openNav()" >&#9776;</span>
+                            <h2 style="align-content:center; font-family:Lucida Sans; font-weight:normal" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Trend Partner&nbsp;&nbsp;&nbsp;
+                            </h2>
+                             <h3 style="align-content:end; font-family:Lucida Sans; font-weight:normal; " class="auto-style12" > Admin side</h3>
+                              
+                        </td>
+                    </tr>
+                    <tr class="footer">
+                       <td class="auto-style15">
+                                                       
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                           <asp:Button ID="Button1" runat="server" Text="Add Categories" OnClick="Button1_Click" />
+                                                       
+                       </td>
+                       
+                       <td class="auto-style15">
+                                                       
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                           <asp:Button ID="Button2" runat="server" Text="Add Products" OnClick="Button2_Click" />
+                                                       
+                       </td>
+                       <td class="auto-style13">
+                                                       
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                    
+                           <asp:Button ID="Button3" runat="server" Text="Update Products" />
+                                                       
+                       </td>
+                       <td class="auto-style13">
+                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                           
+                           <asp:Button ID="Button4" runat="server" Text="Logout" CssClass="auto-style17" OnClick="Button4_Click" />
+                                                       
+                       </td>
+                    </tr>
+                    <tr class="content">
+                        <td class="auto-style3" colspan="4" ><asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"  >
+                            </asp:ContentPlaceHolder></td>
+                    </tr>
+                    <tr class="footer1" >
+                        <td class="footer1" colspan="4" ><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">User Side</asp:HyperLink></td>
+                    </tr>
+                    
+                   
+                    
+                  
+                </table>
+            
+        </div>
+    </form>
+</body>
+</html>
